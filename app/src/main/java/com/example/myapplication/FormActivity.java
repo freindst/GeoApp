@@ -24,10 +24,12 @@ public class FormActivity extends AppCompatActivity {
         gb = (GlobalVariable)this.getApplication();
         ArrayList<ToDo> todos = gb.getTodoList();
         int position = getIntent().getIntExtra("position", 0);
-        ToDo item = todos.get( position );
+        if (todos.size() > position) {
+            ToDo item = todos.get(position);
 
-        if (item != null){
-            this.populateForm(item);
+            if (item != null) {
+                this.populateForm(item);
+            }
         }
 
         Button saveBtn = (Button)findViewById(R.id.button_submitToDo);

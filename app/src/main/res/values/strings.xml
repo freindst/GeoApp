@@ -27,4 +27,7 @@
     <string name="form_radio_done">Complete</string>
     <string name="form_radio_not_done">Not Yet</string>
     <string name="form_button_save">Save</string>
+
+    <string name="button_current_location">Get Current Location</string>
+    <string name="button_new_todo">New To-Do</string>
 </resources>

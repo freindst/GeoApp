@@ -21,6 +21,18 @@ public class GlobalVariable extends Application {
     }
 
     public void updateTodoList(int position, ToDo item) {
-        todoList.set(position, item);
+        if (todoList.size() > position){
+            todoList.set(position, item);
+        } else {
+            todoList.add(item);
+        }
+    }
+
+    public int getTodoSize()
+    {
+        if (!initiated){
+            return 0;
+        }
+        return todoList.size();
     }
 }
